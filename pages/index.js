@@ -42,7 +42,10 @@ export default function Home() {
       <div className={`container-fluid ${styles.topContainer}`}>
         <h1 className={`${styles.appTitle}`}>Generate a Cat</h1>
 
-        <BuyMeACoffee />
+        <BuyMeACoffee /> 
+        <a href="https://github.com/qvgk/CatGenerator" target="_blank">
+          <img style={{cursor: 'pointer', marginLeft: '40px'}} alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/qvgk/CatGenerator?style=flat-square" />
+        </a>
       </div>
 
 
@@ -53,9 +56,8 @@ export default function Home() {
       <div className={`${styles.mainContainer}`} style={{display: `${showCat}`}}>
         <img src={`${catImage}`} alt="cat" style={{ maxWidth: '90vw', maxHeight: '60vh'}} />
 
-        <Link href="https://cataas.com/#/">
-          <p className={`${styles.apiText}`}>This application was built using the CATAAS API.</p>
-        </Link>
+        <br/>
+        <a href="https://cataas.com/#/" target="__blank" className={`${styles.apiText}`}>This application was built using the CATAAS API.</a>
       </div>
     </div>
   )

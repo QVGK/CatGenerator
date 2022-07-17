@@ -22,7 +22,9 @@
 }
 
 .apiText {
-  cursor: pointer;
+  color: black;
   font-family: 'Edu SA Beginner', sans-serif;
   font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 40px;
 }
