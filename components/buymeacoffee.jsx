@@ -8,6 +8,7 @@ export default function Coffee() {
         className={styles.buyButton}
         target="_blank"
         href="https://www.buymeacoffee.com/qvgk"
+        rel="noreferrer"
     >
         <img
             className={styles.coffeeImage}

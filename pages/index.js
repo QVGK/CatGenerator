@@ -21,7 +21,11 @@ export default function Home() {
         setCatImage(URL.createObjectURL(blob))
         setLoading(false)
         setShowCat('')
+      }).catch(err => {
+        alert('Could not create image blob. Please try again later.')
       })
+    }).catch(err => {
+      alert('Could not connect to API. Please try again later.')
     })
   }, [])
 
@@ -43,7 +47,7 @@ export default function Home() {
         <h1 className={`${styles.appTitle}`}>Generate a Cat</h1>
 
         <BuyMeACoffee /> 
-        <a href="https://github.com/qvgk/CatGenerator" target="_blank">
+        <a href="https://github.com/qvgk/CatGenerator" target="_blank" rel="noreferrer">
           <img style={{cursor: 'pointer', marginLeft: '40px'}} alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/qvgk/CatGenerator?style=flat-square" />
         </a>
       </div>
@@ -57,7 +61,7 @@ export default function Home() {
         <img src={`${catImage}`} alt="cat" style={{ maxWidth: '90vw', maxHeight: '60vh'}} />
 
         <br/>
-        <a href="https://cataas.com/#/" target="__blank" className={`${styles.apiText}`}>This application was built using the CATAAS API.</a>
+        <a href="https://cataas.com/#/" target="__blank" rel="noreferrer" className={`${styles.apiText}`}>This application was built using the CATAAS API.</a>
       </div>
     </div>
   )
