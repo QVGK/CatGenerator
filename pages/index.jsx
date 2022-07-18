@@ -2,14 +2,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Dynamic from 'next/dynamic'
 import {v4 as uuidv4} from 'uuid'
 import {useEffect, useState} from 'react'
 import {BarLoader} from 'react-spinners'
 import styles from '../styles/Home.module.css'
+import {motion} from 'framer-motion'
 import bg from '../img/Background.png'
 
 // Components
-import BuyMeACoffee from '../components/buymeacoffee'
+const TopContainer = Dynamic(() => import('../components/topContainer'), {ssr: false})
 
 export default function Home() {
   const [catImage, setCatImage] = useState('blob:')
@@ -44,15 +46,7 @@ export default function Home() {
         </style>
       </Head>
 
-      <div className={`container-fluid ${styles.topContainer}`}>
-        <h1 className={`${styles.appTitle}`}>Generate a Cat</h1>
-
-        <BuyMeACoffee /> 
-        <a href="https://github.com/qvgk/CatGenerator" target="_blank" rel="noreferrer">
-          <img style={{cursor: 'pointer', marginLeft: '40px'}} alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/qvgk/CatGenerator?style=flat-square" />
-        </a>
-      </div>
-
+      <TopContainer />
 
       <div className={`${styles.imageLoaderContainer}`}>
         <BarLoader loading={loading} />

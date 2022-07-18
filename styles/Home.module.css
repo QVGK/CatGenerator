@@ -27,4 +27,10 @@
   font-weight: 700;
   text-decoration: none;
   margin-bottom: 40px;
+  transition: .2s;
+}
+
+.apiText:hover {
+  color: orange;
+  text-decoration: underline;
 }
