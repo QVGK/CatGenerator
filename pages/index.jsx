@@ -6,6 +6,7 @@ import {v4 as uuidv4} from 'uuid'
 import {useEffect, useState} from 'react'
 import {BarLoader} from 'react-spinners'
 import styles from '../styles/Home.module.css'
+import bg from '../img/Background.png'
 
 // Components
 import BuyMeACoffee from '../components/buymeacoffee'
@@ -37,7 +38,7 @@ export default function Home() {
         <style>
           {`
             body {
-              background-color: rgb(255, 72, 0);
+              background-image: url(${bg.src});
             }
           `}
         </style>
